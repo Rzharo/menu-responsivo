@@ -390,3 +390,45 @@ body.loaded {
 
 
 /*** VON: RZHARO D. JESUS ***/
+
+.containermusic {
+    position: fixed; /* Fixa o contêiner na tela */
+    bottom: 30px; /* Distância do fundo da tela */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Compensa a largura do contêiner para centralizar */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    width: 100%;
+    z-index: 999; /* Garante que o botão fique sobre outros elementos */
+}
+
+.round-button {
+    width: 80px; /* Tamanho do botão */
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(0, 132, 255, 0), rgba(0, 13, 41, 0.322));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+    font-size: 40px; /* Tamanho do ícone */
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.round-button:hover {
+    background: linear-gradient(135deg, rgba(44, 117, 185, 0.329), rgba(0, 13, 41, 0.322));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+     /* Cor do botão ao passar o mouse */
+}
+
+.fas.fa-music {
+    font-size: 35px;
+}
