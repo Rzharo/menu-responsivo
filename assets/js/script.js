@@ -13,14 +13,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const preloader = document.querySelector('.preloader');
     const content = document.querySelector('.conteudo');
     
-    // Deixar a animação de pré-carregamento por 1 segundo
+    // Deixar o preloader visível por 1 segundo
     setTimeout(function() {
-        preloader.classList.add('hide');  // Assumindo que hide faz a animação de desaparecer
+        // Adiciona a classe hide para a animação fade-out
+        preloader.classList.add('fade-out');
         setTimeout(function() {
-            preloader.style.display = 'none';  // Ocultar o preloader
-            content.style.opacity = '1';  // Exibir o conteúdo
-        }, 1000);  // Adicionando uma pequena pausa de 1 segundo para garantir que o efeito de animação seja visível
-    }, 1000);  // Aguardar 1 segundo antes de começar a esconder o preloader
+            preloader.style.display = 'none';  // Após o fade-out, esconder o preloader
+            content.style.opacity = '1';  // Tornar o conteúdo visível após o preloader
+        }, 1000);  // Espera 1 segundo para garantir que o fade-out tenha sido aplicado
+    }, 1000);  // O preloader fica visível por 1 segundo antes de começar a animação de fade-out
 });
 
 // Remover o bloqueio de inspeção de código e combinações de teclas
