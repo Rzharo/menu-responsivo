@@ -13,13 +13,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const preloader = document.querySelector('.preloader');
     const content = document.querySelector('.conteudo');
     
+    // Deixar a animação de pré-carregamento por 1 segundo
     setTimeout(function() {
-        preloader.classList.add('hide');
+        preloader.classList.add('hide');  // Assumindo que hide faz a animação de desaparecer
         setTimeout(function() {
-            preloader.style.display = 'none';
-            content.style.opacity = '1';
-        }, 500);  // Reduzi o tempo para 500ms para um carregamento mais rápido
-    }, 500);  // Inicia o carregamento do conteúdo após 500ms
+            preloader.style.display = 'none';  // Ocultar o preloader
+            content.style.opacity = '1';  // Exibir o conteúdo
+        }, 1000);  // Adicionando uma pequena pausa de 1 segundo para garantir que o efeito de animação seja visível
+    }, 1000);  // Aguardar 1 segundo antes de começar a esconder o preloader
 });
 
 // Remover o bloqueio de inspeção de código e combinações de teclas
