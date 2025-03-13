@@ -413,7 +413,7 @@ body.loaded {
     width: 80px; /* Tamanho do botão */
     height: 80px;
     border-radius: 50%;
-    background: linear-gradient(135deg, rgba(0, 132, 255, 0), rgba(0, 13, 41, 0.322));
+    background: linear-gradient(135deg, rgba(0, 132, 255, 0), rgba(0, 13, 41, 0));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     color: white;
@@ -428,7 +428,7 @@ body.loaded {
 }
 
 .round-button:hover {
-    background: linear-gradient(135deg, rgba(44, 117, 185, 0.329), rgba(0, 13, 41, 0.322));
+    background: linear-gradient(135deg, rgba(44, 117, 185, 0), rgba(0, 13, 41, 0));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
      /* Cor do botão ao passar o mouse */
