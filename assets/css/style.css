@@ -34,6 +34,14 @@ body {
     background-position: center;
 }
 
+.nav-bar img {
+    margin-right: 20px;
+}
+
+.login-button {
+    margin-left: 20px;
+}
+
 .logo img {
     align-items: center;
     justify-content: center;
@@ -46,9 +54,13 @@ body {
     transform: rotate(360deg);
 }
 
+.nav-bar{
+    margin-top: 7px;
+}
+
 .nav-list li a {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 550;
     font-style: normal;
 }
 
@@ -62,9 +74,9 @@ body {
     left: 50%;
     bottom: 0;
     width: 0;
-    height: 1.6px;
+    height: 1.3px;
     background-color: #fff;
-    transition: width .5s;
+    transition: width .3s;
     transform: translateX(-50%)
 }
 
@@ -86,8 +98,9 @@ header {
 
 .nav-bar {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: row;  /* Já está correto, os itens ficam em linha */
+    justify-content: center;  /* Centraliza os itens horizontalmente */
+    align-items: center;  /* Centraliza os itens verticalmente */
     padding: 0.5rem 6rem;
 }
 
@@ -178,15 +191,20 @@ body.loaded {
 }
 
 .login-button button {
+    width: 110px;
+    height: 40px;
+    margin-left: 20px;
+    
     border: none;
     color: #ffffff;
-    border: 1px solid #ffffff;
+    border: 2px solid #ffffff;
 
 
     font-weight: 600;
-    padding: 10px 40px;
-    border-radius: 50px;
-    background: linear-gradient(135deg, rgba(0, 132, 255, 0), rgba(0, 13, 41, 0.322));
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(0, 132, 255, 0), rgba(0, 0, 0, 0.322));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     transition: .5s;
@@ -195,6 +213,7 @@ body.loaded {
 
 .login-button button:hover {
     background-color: #ffffff;
+    color: #000000;
 
     transition: .7s;
 }
@@ -211,18 +230,64 @@ body.loaded {
     transition: .5s;
 }
 
-@media screen and (max-width: 1022px) {
+
+@media screen and (max-width: 1120px) {
+
+    .nav-bar img {
+        margin-right: 50px;
+    }
+
+    .nav-bar img {
+        margin-left: 50px;
+    }
 
     .login-button button {
+        width: 70px;
+        height: 60px;
+    }
+
+}
+
+@media screen and (max-width: 1088px) {
+    .nav-bar img {
+        margin-right: 190px;
+    }
+
+    .nav-bar img {
+        margin-left: 190px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .nav-bar img {
+        margin-right: 50px;
+    }
+
+    .nav-bar img {
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 1022px) {
+
+    .login-button button{
+        margin: 0 5px;
+    }
+
+    .login-button button {
+        width: 70px;
+        height: 60px;
+        
         border: none;
         color: #ffffff;
-        border: 1px solid #ffffff;
+        border: 2px solid #ffffff;
     
     
         font-weight: 600;
-        padding: 10px 40px;
-        border-radius: 50px;
-        background: linear-gradient(135deg, rgba(0, 13, 41, 0.637), rgba(0, 13, 41, 0.322));
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 20px;
+        background: linear-gradient(135deg, rgba(0, 132, 255, 0), rgba(0, 0, 0, 0.322));
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         transition: .5s;
@@ -264,7 +329,7 @@ body.loaded {
 
 }
 
-@media screen and (max-width: 1110px) {
+@media screen and (max-width: 1088px) {
     .nav-bar {
         padding: 1.5rem 4rem;
         transition: .5s;
@@ -436,7 +501,7 @@ body.loaded {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.281);
     transition: background-color 0.8s ease;
 }
 

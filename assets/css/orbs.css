@@ -30,38 +30,33 @@ body {
     background-color: #000;
 }
 
-.logo {
+.nav-bar img {
+    margin-right: 20px;
+}
+
+.login-button {
+    margin-left: 20px;
+}
+
+.logo img {
     align-items: center;
     justify-content: center;
     margin-top: 2px;
     max-width: 30px;
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.6s ease-in-out;
 }
 
-.logo:hover {
-    transform: rotate(180deg);
+.logo img:hover {
+    transform: rotate(360deg);
 }
 
-.preloader {
-    position: fixed;
-
-}
-
-header {
-    align-items: center;
-    background-color: #24252a00;
-}
-
-.nav-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 0.5rem 6rem;
+.nav-bar{
+    margin-top: 7px;
 }
 
 .nav-list li a {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 550;
     font-style: normal;
 }
 
@@ -75,9 +70,9 @@ header {
     left: 50%;
     bottom: 0;
     width: 0;
-    height: 1.6px;
+    height: 1.3px;
     background-color: #fff;
-    transition: width .5s;
+    transition: width .3s;
     transform: translateX(-50%)
 }
 
@@ -85,7 +80,30 @@ header {
     width: 100%;
 }
 
+
+
 .preloader {
+    position: fixed;
+
+}
+
+header {
+    align-items: center;
+    background-color: #24252a00;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;  /* Já está correto, os itens ficam em linha */
+    justify-content: center;  /* Centraliza os itens horizontalmente */
+    align-items: center;  /* Centraliza os itens verticalmente */
+    padding: 0.5rem 6rem;
+}
+
+/* Estilo para o preloader */
+.preloader {
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -96,39 +114,41 @@ header {
     z-index: 9999;
     opacity: 1;
     visibility: visible;
-    transition: opacity 1.5s ease-out, visibility 0s 1.5s
+    transition: opacity 1.5s ease-out, visibility 0s 1.5s; /* Fade-out suave */
 }
 
 .preloader img {
     width: 90px;
-    animation: 2s forwards spin, 2s 2s forwards fadeout
+    animation: 2s forwards spin, 2s 2s forwards fadeout;
 }
 
+/* Animação para o giro da imagem */
 @keyframes spin {
     0% {
-        transform: rotate(0)
+        transform: rotate(0deg);
     }
-
     100% {
-        transform: rotate(360deg)
+        transform: rotate(360deg);
     }
 }
 
+/* Animação de fade-out para o preloader */
 @keyframes fadeout {
     0% {
-        opacity: 1
+        opacity: 1;
     }
-
     100% {
-        opacity: 0
+        opacity: 0;
     }
 }
 
+/* Classe que será aplicada ao preloader para ocultá-lo */
 .preloader.hidden {
     opacity: 0;
     visibility: hidden;
-    transition: opacity 1.5s ease-in, visibility 0s 1.5s
+    transition: opacity 1.5s ease-in, visibility 0s 1.5s; /* Fade-out suave */
 }
+
 
 .nav-list {
     transition: opacity 1.5s ease-in
@@ -167,15 +187,20 @@ body.loaded {
 }
 
 .login-button button {
+    width: 110px;
+    height: 40px;
+    margin-left: 20px;
+    
     border: none;
     color: #ffffff;
-    border: 1px solid #ffffff;
+    border: 2px solid #ffffff;
 
 
     font-weight: 600;
-    padding: 10px 40px;
-    border-radius: 50px;
-    background: linear-gradient(135deg, rgba(0, 132, 255, 0), rgba(0, 13, 41, 0.322));
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(0, 132, 255, 0), rgba(0, 0, 0, 0.322));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     transition: .5s;
@@ -184,6 +209,7 @@ body.loaded {
 
 .login-button button:hover {
     background-color: #ffffff;
+    color: #000000;
 
     transition: .7s;
 }
@@ -198,6 +224,89 @@ body.loaded {
     color: #000;
 
     transition: .5s;
+}
+
+
+@media screen and (max-width: 1120px) {
+
+    .nav-bar img {
+        margin-right: 50px;
+    }
+
+    .nav-bar img {
+        margin-left: 50px;
+    }
+
+    .login-button button {
+        width: 70px;
+        height: 60px;
+    }
+
+}
+
+@media screen and (max-width: 1088px) {
+    .nav-bar img {
+        margin-right: 190px;
+    }
+
+    .nav-bar img {
+        margin-left: 190px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .nav-bar img {
+        margin-right: 50px;
+    }
+
+    .nav-bar img {
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 1022px) {
+
+    .login-button button{
+        margin: 0 5px;
+    }
+
+    .login-button button {
+        width: 70px;
+        height: 60px;
+        
+        border: none;
+        color: #ffffff;
+        border: 2px solid #ffffff;
+    
+    
+        font-weight: 600;
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 20px;
+        background: linear-gradient(135deg, rgba(0, 132, 255, 0), rgba(0, 0, 0, 0.322));
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        transition: .5s;
+        cursor: pointer;
+    }
+
+    .login-button button:hover {
+        background-color: #ffffff;
+    
+        transition: .7s;
+    }
+    
+    .login-button button a:hover {
+        background-color: #ffffff;
+    
+        transition: .7s;
+    }
+    
+    .login-button button:hover p {
+        color: #000;
+    
+        transition: .5s;
+    }
 }
 
 .mobile-menu-icon {
@@ -216,7 +325,7 @@ body.loaded {
 
 }
 
-@media screen and (max-width: 1022px) {
+@media screen and (max-width: 1088px) {
     .nav-bar {
         padding: 1.5rem 4rem;
         transition: .5s;
