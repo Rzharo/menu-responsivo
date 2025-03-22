@@ -2,188 +2,262 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/downloads.css">
-    <link rel="icon" href="assets/img/logo.png" type="image/x-icon">
-     <!-- Icons -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/downloads.css">
+  <link rel="icon" href="assets/img/logo.png" type="image/x-icon">
+  <title>Downloads - Rzharo</title>
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!-- Icons -->
-    <title>Downloads - Rzharo</title>
+  <style>
+    /* Estilos globais */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Faz o body ocupar toda a altura da tela */
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Conteúdo principal */
+    main {
+      flex: 1; /* Faz o conteúdo principal ocupar o espaço restante */
+      padding-bottom: 150px; /* Distância entre os cards e o rodapé */
+    }
+
+    /* Estilos do rodapé */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      width: 100%;
+      position: relative;
+      bottom: 0;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    /* Estilo dos botões de redes sociais */
+    .social-buttons {
+      margin-top: 10px;
+    }
+
+    .social-buttons a {
+      display: inline-block;
+      margin: 0 10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      line-height: 40px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .social-buttons a:hover {
+      background-color: #777;
+    }
+  </style>
 </head>
 
 <body>
+  <header>
+    <nav class="nav-bar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/img/logo.png" alt="Logo" class="logo">
+        </a>
+      </div>
+      <div class="nav-list">
+        <ul>
+          <li class="nav-item"><a href="store.html" class="nav-link">Store</a></li>
+          <li class="nav-item"><a href="ferramentas.html" class="nav-link">Ferramentas</a></li>
+          <li class="nav-item"><a href="orbs.html" class="nav-link">Orbs</a></li>
+          <li class="nav-item"><a href="icons.html" class="nav-link">Icons</a></li>
+          <li class="nav-item"><a href="downloads.html" class="nav-link">Downloads</a></li>
+          <li class="nav-item"><a href="wallpapers.html" class="nav-link">Wallpapers</a></li>
+          <li class="nav-item" id="pcspec"><a href="pcspec.html" class="nav-link">PC Spec</a></li>
+        </ul>
+      </div>
 
-    
+      <div class="login-button">
+        <a href="https://chat.whatsapp.com/KmJFKhplGd8C9FSBdhNToY" target="_blank">
+          <button><i class="bi bi-whatsapp"></i> Group</button>
+        </a>
+      </div>
 
-    <header>
-        <nav class="nav-bar">
-            <div class="logo">
-              <a href="index.html">
-                <img src="assets/img/logo.png" alt="Logo" class="logo">
-              </a>
-            </div>
-            <div class="nav-list">
-              <ul>
-                <li class="nav-item"><a href="store.html" class="nav-link">Store</a></li>
-                <li class="nav-item"><a href="ferramentas.html" class="nav-link">Ferramentas</a></li>
-                <li class="nav-item"><a href="orbs.html" class="nav-link">Orbs</a></li>
-                <li class="nav-item"><a href="icons.html" class="nav-link">Icons</a></li>
-                <li class="nav-item"><a href="downloads.html" class="nav-link">Downloads</a></li>
-                <li class="nav-item"><a href="wallpapers.html" class="nav-link">wallpapers</a></li>
-                <li class="nav-item" id="pcspec"><a href="pcspec.html" class="nav-link">PC Spec</a></li>
-            </ul>
-            </div>
-            <div class="login-button">
-              <a href="https://chat.whatsapp.com/KmJFKhplGd8C9FSBdhNToY" target="_blank">
-                <button><i class="bi bi-whatsapp"></i> Group</button>
-              </a>
+      <div class="mobile-menu-icon">
+        <button onclick="menuShow()"><img class="icon" src="assets/img/menu_white_36dp.svg" alt=""></button>
+      </div>
+    </nav>
+
+    <div class="mobile-menu">
+      <ul>
+        <li class="nav-item"><a href="store.html" class="nav-link">store</a></li>
+        <li class="nav-item"><a href="ferramentas.html" class="nav-link">ferramentas</a></li>
+        <li class="nav-item"><a href="orbs.html" class="nav-link">orbs</a></li>
+        <li class="nav-item"><a href="icons.html" class="nav-link">icons</a></li>
+        <li class="nav-item"><a href="downloads.html" class="nav-link">downloads</a></li>
+        <li class="nav-item"><a href="wallpapers.html" class="nav-link">wallpapers</a></li>
+        <li class="nav-item" id="pcspec"><a href="pcspec.html" class="nav-link">PC Spec</a></li>
+      </ul>
+
+      <div class="login-button">
+        <a href="https://chat.whatsapp.com/KmJFKhplGd8C9FSBdhNToY" target="_blank">
+          <button><i class="bi bi-whatsapp"></i>
+            <p>Whatsapp</p>
+          </button>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <div class="bloco-final">
+      <div class="bbb">
+        <h2 class="tiger" id="title-dw">DOWNLOADS</h2>
+        <div class="pai">
+          <div class="filho">
+            <!-- Cards de ferramentas -->
+
+            <div class="cardrz">
+                <img src="assets/img/downloads/thumbs/boostergame.jpg">
+                <div>
+                  <h1>🧃 BOOSTER GAMES</h1>
+                  <span>OTIMIZE</span>
+                  <span>SEU DESKTOP</span>
+                  <a href="https://rekonise.com/booster-games-or-by-rzharo-78wbo" target="_blank">
+                    <button class="btn" id="btn2">Download</button>
+                  </a>
+                </div>
               </div>
 
+            <div class="cardrz">
+                <img src="assets/img/downloads/thumbs/som-pvp-xitado.jpg">
+                <div>
+                  <h1>🔉 SOM XITADO</h1>
+                  <span>MOD</span>
+                  <span>SOM</span>
+                  <a href="https://discord.com/channels/1198522644853690429/1349367210056876042" target="_blank">
+                    <button class="btn" id="btn2">Download</button>
+                  </a>
+                </div>
+              </div>
 
-            <div class="mobile-menu-icon">
-                <button onclick="menuShow()"><img class="icon" src="assets/img/menu_white_36dp.svg" alt=""></button>
-            </div>
-        </nav>
+            <div class="cardrz">
+                <img src="assets/img/downloads/thumbs/Citizen Ballet.jpg">
+                <div>
+                  <h1>🍷 CITIZEN BALLET</h1>
+                  <span>SENHA</span>
+                  <span>nnapballet2024</span>
+                  <a href="https://drive.google.com/file/d/11yw00g94Wi8DmmmADTJ3WZJ-SM2bWuTe/view" target="_blank">
+                    <button class="btn" id="btn2">Download</button>
+                  </a>
+                </div>
+              </div>
 
-        <div class="mobile-menu">
-            <ul>
-                <li class="nav-item"><a href="store.html" class="nav-link">Store</a></li>
-                <li class="nav-item"><a href="ferramentas.html" class="nav-link">Ferramentas</a></li>
-                <li class="nav-item"><a href="orbs.html" class="nav-link">Orbs</a></li>
-                <li class="nav-item"><a href="icons.html" class="nav-link">Icons</a></li>
-                <li class="nav-item"><a href="downloads.html" class="nav-link">Downloads</a></li>
-                <li class="nav-item"><a href="wallpapers.html" class="nav-link">Wallpapers</a></li>
-                <li class="nav-item" id="pcspec"><a href="pcspec.html" class="nav-link">PC Spec</a></li>
-            </ul>
+            <div class="cardrz">
+                <img src="assets/img/downloads/thumbs/Som Tequinho.jpg">
+                <div>
+                  <h1>🔉 SOM TEQUINHO</h1>
+                  <span>MOD</span>
+                  <span>SOM</span>
+                  <a href="https://discord.com/channels/1198522644853690429/1349366492097024063" target="_blank">
+                    <button class="btn" id="btn2">Download</button>
+                  </a>
+                </div>
+              </div>
 
-            <div class="login-button">
-                <a href="https://chat.whatsapp.com/KmJFKhplGd8C9FSBdhNToY" target="_blank">
-                    <button><i class="bi bi-whatsapp"></i><p>Whatsapp</p></button>
-                </a>
-            </div>
+            <div class="cardrz">
+                <img src="assets/img/downloads/thumbs/Relogin Custom.jpg">
+                <div>
+                  <h1>☄️ RELOGIO CUSTOM</h1>
+                  <span>COSTOMISE RELOGIO</span>
+                  <span>WINDOWS</span>
+                  <a href="https://fir3.net/RelogioCustom" target="_blank">
+                    <button class="btn" id="btn2">Download</button>
+                  </a>
+                </div>
+              </div>
+
+            <div class="cardrz">
+                <img src="assets/img/downloads/thumbs/startmenu.jpg">
+                <div>
+                  <h1>🧪 START MENU</h1>
+                  <span>DEIXE SEU PC</span>
+                  <span>BONITO</span>
+                  <a href="https://drive.google.com/file/d/1lInRRvuqVZRmB-Ya_yAOmnFHl_cSWUA1/view" target="_blank">
+                    <button class="btn" id="btn2">Download</button>
+                  </a>
+                </div>
+              </div>
+
+            <div class="cardrz">
+                <img src="assets/img/downloads/thumbs/Empty Auto.jpg">
+                <div>
+                  <h1>🏄 EMPTY AUTO</h1>
+                  <span>MEMORY CLEAN</span>
+                  <span>AUTOMATICO</span>
+                  <a href="https://fir3.net/EmptyAutoRzHaro" target="_blank">
+                    <button class="btn" id="btn2">Download</button>
+                  </a>
+                </div>
+              </div>
+
+            
+
+            <div class="cardrz">
+                <img src="assets/img/downloads/thumbs/PainelPcLindo.jpg">
+                <div>
+                  <h1>💜 PAINEL PC LINDO</h1>
+                  <span>WINDOWS</span>
+                  <span>LINDO</span>
+                  <a href="https://fir3.net/PcLindoV2" target="_blank">
+                    <button class="btn" id="btn2">Download</button>
+                  </a>
+                </div>
+              </div>
+
+              <div class="cardrz">
+                <img src="assets/img/downloads/thumbs/Tweaks Clean.jpg">
+                <div>
+                  <h1>🚀 TWEAKS CLEAN</h1>
+                  <span>LIMPEZA</span>
+                  <span>BOOSTER GAMES</span>
+                  <a href="https://fir3.net/RzCleanBooster" target="_blank">
+                    <button class="btn" id="btn2">Download</button>
+                  </a>
+                </div>
+              </div>
+
+            
+
+          </div>
         </div>
+      </div>
+    </div>
+  </main>
 
-        <div class="bbb">
+  <!-- Rodapé -->
+  <footer>
+    <p>Quando você tem reais, você vê quem são os reais. !</p>
+    <div class="social-buttons">
+      <a href="https://www.youtube.com/@rzharo1" target="_blank"><i class="bi bi-youtube"></i></a>
+      <a href="https://www.instagram.com/rzharo/" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://br.pinterest.com/rzharo/_profile/" target="_blank"><i class="bi bi-pinterest"></i></a>
+    </div>
+  </footer>
 
-            <h2 class="tiger" id="title-dw">DOWNLOADS</h2>
-
-            <div class="pai">
-                
-                <div class="filho">
-                    <div class="card">
-                        <a href="https://www.youtube.com/watch?v=tJ61O62znOE&t=7s" target="_blank">
-                            <img src="assets/img/downloads/thumbs/som-pvp-xitado.jpg">
-                        </a>
-                        <div>
-                            <a href="https://discord.com/invite/T6TuG7vtvq" target="_blank">
-                                <button class="btn" id="btn2">Download</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="filho">
-                    <div class="card">
-                        <a href="https://youtu.be/Hmvk6Y9-j9A?si=WXY87v8hQPOy6sjq" target="_blank">
-                            <img src="assets/img/downloads/thumbs/Citizen Ballet.jpg">
-                        </a>
-                        <div>
-                            <a href="https://discord.com/invite/p22J5xJQcA" target="_blank">
-                                <button class="btn">Download</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="filho">
-                    <div class="card">
-                        <a href="https://youtu.be/G-4sJs31Tw8?si=yQEYecxRfd7uQqZY" target="_blank">
-                            <img src="assets/img/downloads/thumbs/Som Tequinho.jpg">
-                        </a>
-                        <div>
-                            <a href="https://discord.com/invite/T6TuG7vtvq" target="_blank">
-                                <button class="btn">Download</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="filho">
-                    <div class="card">
-                        <a href="https://youtu.be/o47NvZe0wjE?si=uDhZVhl2PUk4Vew9" target="_blank">
-                            <img src="assets/img/downloads/thumbs/Relogin Custom.jpg">
-                        </a>
-                        <div>
-                            <a href="https://fir3.net/RelogioCustom" target="_blank">
-                                <button class="btn">Download</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="filho">
-                    <div class="card">
-                        <a href="https://youtu.be/i0n0NaLjh-Q?si=Wtop64PDcIDquQrc" target="_blank">
-                            <img src="assets/img/downloads/thumbs/startmenu.jpg">
-                        </a>
-                        <div>
-                            <a href="https://drive.google.com/file/d/1lInRRvuqVZRmB-Ya_yAOmnFHl_cSWUA1/view" target="_blank">
-                                <button class="btn">Download</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="filho">
-                    <div class="card">
-                        <a href="https://youtu.be/Yx9qH8MoeKk?si=6p-l3oB6HL-xHSGW" target="_blank">
-                            <img src="assets/img/downloads/thumbs/Empty Auto.jpg">
-                        </a>
-                        <div>
-                            <a href="https://fir3.net/EmptyAutoRzHaro" target="_blank">
-                                <button class="btn">Download</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="filho">
-                    <div class="card">
-                        <a href="https://youtu.be/_ATOiy0P4ik?si=j9bTI-1eBpo6aONV" target="_blank">
-                            <img src="assets/img/downloads/thumbs/PainelPcLindo.jpg">
-                        </a>
-                        <div>
-                            <a href="https://fir3.net/PcLindoV2" target="_blank">
-                                <button class="btn">Download</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="filho">
-                    <div class="card">
-                        <a href="https://youtu.be/Uzocod-gBfk?si=Nwh4DC-Lv1YHE_yV" target="_blank">
-                            <img src="assets/img/downloads/thumbs/Tweaks Clean.jpg">
-                        </a>
-                        <div>
-                            <a href="https://fir3.net/RzCleanBooster" target="_blank">
-                                <button class="btn">Download</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-
-    </header>
-
-    <script src="assets/js/script.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 <!-- VON: RZHARO D. JESSUS  -->
-
 </html>

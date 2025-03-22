@@ -11,37 +11,88 @@
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!-- Icons -->
+  <style>
+    /* Estilos globais */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Faz o body ocupar toda a altura da tela */
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Conteúdo principal */
+    main {
+      flex: 1; /* Faz o conteúdo principal ocupar o espaço restante */
+      padding-bottom: 150px; /* Distância entre os cards e o rodapé */
+    }
+
+    /* Estilos do rodapé */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      width: 100%;
+      position: relative;
+      bottom: 0;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    /* Estilo dos botões de redes sociais */
+    .social-buttons {
+      margin-top: 10px;
+    }
+
+    .social-buttons a {
+      display: inline-block;
+      margin: 0 10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      line-height: 40px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .social-buttons a:hover {
+      background-color: #777;
+    }
+  </style>
 </head>
 
 <body>
-
-
-
   <header>
     <nav class="nav-bar">
       <div class="logo">
-          <a href="index.html">
-              <img src="assets/img/logo.png" alt="Logo" class="logo">
-          </a>
+        <a href="index.html">
+          <img src="assets/img/logo.png" alt="Logo" class="logo">
+        </a>
       </div>
       <div class="nav-list">
-          <ul>
-              <li class="nav-item"><a href="store.html" class="nav-link">Store</a></li>
-              <li class="nav-item"><a href="ferramentas.html" class="nav-link">Ferramentas</a></li>
-              <li class="nav-item"><a href="orbs.html" class="nav-link">Orbs</a></li>
-              <li class="nav-item"><a href="icons.html" class="nav-link">Icons</a></li>
-              <li class="nav-item"><a href="downloads.html" class="nav-link">Downloads</a></li>
-              <li class="nav-item"><a href="wallpapers.html" class="nav-link">Wallpapers</a></li>
-              <li class="nav-item" id="pcspec"><a href="pcspec.html" class="nav-link">PC Spec</a></li>
-          </ul>
+        <ul>
+          <li class="nav-item"><a href="store.html" class="nav-link">Store</a></li>
+          <li class="nav-item"><a href="ferramentas.html" class="nav-link">Ferramentas</a></li>
+          <li class="nav-item"><a href="orbs.html" class="nav-link">Orbs</a></li>
+          <li class="nav-item"><a href="icons.html" class="nav-link">Icons</a></li>
+          <li class="nav-item"><a href="downloads.html" class="nav-link">Downloads</a></li>
+          <li class="nav-item"><a href="wallpapers.html" class="nav-link">Wallpapers</a></li>
+          <li class="nav-item" id="pcspec"><a href="pcspec.html" class="nav-link">PC Spec</a></li>
+        </ul>
       </div>
 
       <div class="login-button">
-<a href="https://chat.whatsapp.com/KmJFKhplGd8C9FSBdhNToY" target="_blank">
-  <button><i class="bi bi-whatsapp"></i> Group</button>
-</a>
-</div>
-
+        <a href="https://chat.whatsapp.com/KmJFKhplGd8C9FSBdhNToY" target="_blank">
+          <button><i class="bi bi-whatsapp"></i> Group</button>
+        </a>
+      </div>
 
       <div class="mobile-menu-icon">
         <button onclick="menuShow()"><img class="icon" src="assets/img/menu_white_36dp.svg" alt=""></button>
@@ -57,7 +108,7 @@
         <li class="nav-item"><a href="downloads.html" class="nav-link">downloads</a></li>
         <li class="nav-item"><a href="wallpapers.html" class="nav-link">wallpapers</a></li>
         <li class="nav-item" id="pcspec"><a href="pcspec.html" class="nav-link">PC Spec</a></li>
-    </ul>
+      </ul>
 
       <div class="login-button">
         <a href="https://chat.whatsapp.com/KmJFKhplGd8C9FSBdhNToY" target="_blank">
@@ -67,17 +118,16 @@
         </a>
       </div>
     </div>
+  </header>
 
+  <!-- Conteúdo principal -->
+  <main>
     <div class="bloco-final">
-
       <div class="bbb">
-
         <h2 class="tiger" id="title-dw">FERRAMENTAS</h2>
-
         <div class="pai">
-
           <div class="filho">
-
+            <!-- Cards de ferramentas -->
             <div class="cardrz">
               <img src="assets/img/ferramentas/ObsLite.png">
               <div>
@@ -185,25 +235,23 @@
                 </a>
               </div>
             </div>
-
-          </div>
-          <div class="filho">
-
           </div>
         </div>
-
-        <!------------------ COMUNIDADE ------------------>
-
-        <!------------------ /COMUNIDADE ------------------>
-
       </div>
+    </div>
+  </main>
 
-
-  </header>
+  <!-- Rodapé -->
+  <footer>
+    <p>Quando você tem reais, você vê quem são os reais. !</p>
+    <div class="social-buttons">
+      <a href="https://www.youtube.com/@rzharo1" target="_blank"><i class="bi bi-youtube"></i></a>
+      <a href="https://www.instagram.com/rzharo/" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://br.pinterest.com/rzharo/_profile/" target="_blank"><i class="bi bi-pinterest"></i></a>
+    </div>
+  </footer>
 
   <script src="assets/js/script.js"></script>
-
 </body>
 <!-- VON: RZHARO D. JESSUS  -->
-
 </html>
