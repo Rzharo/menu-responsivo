@@ -475,66 +475,128 @@ body.loaded {
     }
 }
 
+@media screen and (max-width: 500px) {
+    .bbb h2 {
+        font-size: 25px;
+    }
+}
+
 .pai {
     flex-direction: row;
     flex-wrap: wrap;
 
-
     display: flex;
     justify-content: center;
-
 
     margin: 100%px;
     margin-top: 50px;
 
     background-color: rgba(127, 255, 212, 0);
-    height: 100vh;
 
-    gap: 5%;
-}
-
-@media screen and (max-width: 400px) {
-    .pai {
-        margin: 20px;
-        margin-top: 20px;
-
-        gap: 5%;
-    }
-
-    .bbb h2 {
-        font-size: 25px;
-    }
-
-    .card img {
-        width: 100%;
-        height: 102px;
-        margin: auto;
-    }
-
-    .filho {
-        width: 190px;
-        height: 96px;
-
-        background-color: #91686800;
-    }
-
-
+    gap: 2%;
 }
 
 .filho {
-    width: 290px;
-    height: 200px;
+    flex-direction: row;
+    flex-wrap: wrap;
 
-    background-color: #91686800;
+    display: flex;
+    justify-content: center;
+
+    margin: 100%px;
+    margin-top: 0px;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    background-color: rgba(127, 255, 212, 0);
+
+    gap: 2%;
 }
 
-.card img {
+.filho2 {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    display: flex;
+    justify-content: center;
+
+    margin: 100%px;
+    margin-top: 0px;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    background-color: rgba(127, 255, 212, 0);
+
+    gap: 2%;
+}
+
+.cardrz {
+    margin-top: 20px;
+
+    background: linear-gradient(135deg, hsla(0, 0%, 100%, 0.322), rgba(0, 0, 0, 0.322));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid #ffffff52;
+
+    width: 200px;
+    height: 270px;
+    border-radius: 12px;
+}
+
+.cardrz {
+    position: relative;
+    margin-top: 20px;
+    width: 200px;
+    height: 270px;
+    border-radius: 12px;
+    border: 1px solid #ffffff52;
+    overflow: hidden;
+}
+
+.cardrz::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 162px;
+    height: 100%;
+    background: linear-gradient(270deg, #292929, #505050, #292929);
+    background-size: 200% 200%;
+    animation: gradientAnimation 6s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.cardrz-content {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px;
     border-radius: 10px;
 }
 
-.card div {
+.cardrz img {
+    width: 100%;
+    height: 110px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.cardrz div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -543,6 +605,20 @@ body.loaded {
     height: 50%;
 }
 
+.cardrz h1 {
+    margin: 10px;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.cardrz span {
+    margin: -4px;
+    color: #b6b6b6;
+}
+
+.cardrz a {
+    margin-top: 20px;
+}
 
 /* button */
 .btn {
@@ -565,9 +641,9 @@ body.loaded {
     content: "";
     z-index: -1;
     position: absolute;
-    width: 103%;
+    width: 105%;
     height: 100%;
-    background-color: #333;
+    background-color: #000000;
     left: 0;
     top: 0;
     border-radius: 60px;
@@ -623,7 +699,10 @@ body.loaded {
 
 #next,
 .btn,
-.filho img {
+.cardrz,
+.cardrz img,
+.cardrz h1,
+.cardrz span {
     opacity: 0;
     animation: 2.5s ease-in-out forwards fadeInOpacity
 }
@@ -645,6 +724,59 @@ body.loaded {
 }
 
 
+/*** VON: RZHARO D. JESUS ***/
 
 
-/*** VON: RZHARO D. JESSUS ***/
+.cardrz2 {
+    margin-top: 90px;
+
+    background-color: #00000000;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    width: 200px;
+    height: 70px;
+    border-radius: 12px;
+}
+
+.cardrz2 img {
+    width: 100%;
+    height: 110px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.cardrz2 div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    height: 50%;
+}
+
+.cardrz2 h1 {
+    margin: 10px;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.cardrz2 span {
+    margin: -4px;
+    color: #b6b6b6;
+}
+
+.cardrz2 a {
+    margin-top: 20px;
+}
+
+
+/******************* COMUNIDADE *******************/
+
+/******************* /COMUNIDADE *******************/
+
+
+
+
+
+/*** VON: RZHARO D. JESUS ***/
