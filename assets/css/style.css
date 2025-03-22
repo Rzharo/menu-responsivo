@@ -491,7 +491,7 @@ body.loaded {
     width: 80px; /* Tamanho do botão */
     height: 80px;
     border-radius: 50%;
-    background: linear-gradient(135deg, rgba(0, 132, 255, 0), rgba(0, 13, 41, 0));
+    background: linear-gradient(135deg, rgba(53, 53, 53, 0.185), rgba(0, 13, 41, 0));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     color: white;
